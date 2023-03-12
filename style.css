@@ -1,0 +1,15 @@
+.step__id,
+.step__path,
+.step__attribute,
+.step__info {
+    display: none;
+}
+
+.dt-initialized .step {
+    display: none;
+}
+
+.decision-tree__footer,
+.decision-tree__summary {
+    display: none;
+}
