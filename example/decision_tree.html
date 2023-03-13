@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Decision tree</title>
+    <link rel="stylesheet" type="text/css" href="../style.min.css">
+    <script type="text/javascript" src="../decision_tree.min.js"></script>
+</head>
+<body>
+<div class="decision-tree" id="bookshop">
+    <div class="step" id="bookshop-welcome" data-cookie="outcome=bookshop-welcome">
+        <h3>Welcome</h3>
+        <p>So that we can better help you, we'd like to know a bit more about you.</p>
+        <h4>What brings you here today?</h4>
+        <ul>
+            <li>
+                <a class="step__answer" href="#bookshop-find" data-answer-path="shopping">
+                    Shopping
+                </a>
+            </li>
+            <li>
+                <a class="step__answer" href="#bookshop-education" data-answer-path="education">
+                    Education
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="step" id="bookshop-find">
+        <h3>Lets see if we can find something for you</h3>
+        <p>We have a wide range of topics suitable for you.</p>
+        <h4>What is your interest?</h4>
+        <ul>
+            <li>
+                <a class="step__answer" href="#bookshop-sci-fi" data-answer-path="sci-fi">
+                    Sci-fi
+                </a>
+            </li>
+            <li>
+                <a class="step__answer" href="#bookshop-fantasy" data-answer-path="fantasy">
+                    Fantasy
+                </a>
+            </li>
+            <li>
+                <a class="step__answer" href="#bookshop-comedic-fiction" data-answer-path="comedic-fiction">
+                    Comedic fiction
+                </a>
+            </li>
+            <li>
+                <a class="step__answer" href="#bookshop-none" data-answer-path="none">
+                    None of these
+                </a>
+            </li>
+        </ul>
+        <div class="step__info">
+            <p>You came here today to do some shopping.</p>
+        </div>
+    </div>
+    <div class="step" id="bookshop-education" data-cookie="outcome=bookshop-education">
+        <h3>Find out about the bookstore</h3>
+        <p>You have come here to find out about the bookstore. Please take a look
+            around. We recommend that you start finding out about us, or perhaps you
+            would like to browse our catalog.</p>
+        <div class="step__info">
+            <p>You have come here for education purposes.</p>
+        </div>
+    </div>
+    <div class="step" id="bookshop-sci-fi" data-cookie="outcome=bookshop-sci-fi">
+        <h3>Sci-fi</h3>
+        <p>We have a large range of sci-fi books for purchase. Please visit the Sci-fi section of the bookstore to
+            browse the titles.</p>
+        <div class="step__info">
+            <p>You are interested in sci-fi.</p>
+        </div>
+    </div>
+    <div class="step" id="bookshop-fantasy" data-cookie="outcome=bookshop-fantasy" data-pass-filter="">
+        <h3>Fantasy</h3>
+        <p>We have a large range of fantasy books for purchase. Please visit the fantasy section of the bookstore to
+            browse the titles.</p>
+        <div class="step__info">
+            <p>You are interested in fantasy.</p>
+        </div>
+    </div>
+    <div class="step" id="bookshop-comedic-fiction" data-cookie="outcome=bookshop-comedic-fiction">
+        <h3>Comedic fiction</h3>
+        <p>We have a large range of comedic fiction books for purchase. Please visit the comedic fiction section of
+            the bookstore to browse the titles.</p>
+        <div class="step__info">
+            <p>You are interested in comedic fiction.</p>
+        </div>
+    </div>
+    <div class="step" id="bookshop-none" data-cookie="outcome=bookshop-none">
+        <h3>None of these</h3>
+        <p>None of the listed categories suits you.</p>
+        <div class="step__info">
+            <p>You are interested in other categories.</p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="decision-tree" id="bar">
+    <div class="step" id="bar-welcome" data-cookie="outcome=bookshop-welcome">
+        <h3 class="step__heading">Welcome to BAR!</h3>
+        <div class="step__content">
+        </div>
+        <div class="step__info">
+            <h3>You are in bar.</h3>
+            <p>Bar is offering many types of beverages.</p>
+        </div>
+        <div class="step__qa">
+            <h4 class="step__question">Your nationality?</h4>
+            <div class="step__answers">
+                <ul>
+                    <li>
+                        <a class="step__answer" href="#czech" data-answer-path="czech">
+                            Czech
+                        </a>
+                    </li>
+                    <li>
+                        <a class="step__answer" href="#australian" data-answer-path="australian">
+                            Australian
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="step" id="czech" data-show-summary="on">
+        <h3 class="step__heading">Lets see if we can find something for you</h3>
+        <div class="step__content">
+            <p>We have a wide range of drinks on the menu.</p>
+        </div>
+        <div class="step__info">
+            <h3>You are Czech.</h3>
+            <p>Most Czechs prefer beer.</p>
+        </div>
+        <div class="step__qa">
+            <h4 class="step__question">Which type of drink do you prefer?</h4>
+            <div class="step__answers">
+                <ul>
+                    <li>
+                        <a class="step__answer" href="#beer-drinker" data-answer-path="beer-drinker">
+                            Beer drinker
+                        </a>
+                    </li>
+                    <li>
+                        <a class="step__answer" href="#vodka-drinker" data-answer-path="vodka-drinker">
+                            Vodka drinker
+                        </a>
+                    </li>
+                    <li>
+                        <a class="step__answer" href="#water-drinker" data-answer-path="water-drinker">
+                            Water drinker
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="step" id="australian">
+        <h3 class="step__heading">Lets see if we can find something for you</h3>
+        <div class="step__content">
+            <p>We have a wide range of drinks on the menu.</p>
+        </div>
+        <div class="step__info">
+            <p>You are australian</p>
+        </div>
+        <div class="step__qa">
+            <h4 class="step__question">Which type of drink do you prefer?</h4>
+            <div class="step__answers">
+                <ul>
+                    <li>
+                        <a class="step__answer" href="#beer-drinker" data-answer-path="beer-drinker">
+                            Beer drinker
+                        </a>
+                    </li>
+                    <li>
+                        <a class="step__answer" href="#vodka-drinker" data-answer-path="vodka-drinker">
+                            Vodka drinker
+                        </a>
+                    </li>
+                    <li>
+                        <a class="step__answer" href="#water-drinker" data-answer-path="water-drinker">
+                            Water drinker
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="step" id="vodka-drinker">
+        <h3 class="step__heading">Lets see if we can find something for you</h3>
+        <div class="step__content">
+            <p>We have a wide range of drinks on the menu for vodka drinkers.</p>
+        </div>
+        <div class="step__info">
+            <ul>
+                <li>
+                    Pilsner Urquell
+                </li>
+                <li data-pass-filter="australian beer-drinker">
+                    VB
+                </li>
+                <li data-pass-filter="beer-drinker">
+                    Asahi
+                </li>
+                <li data-pass-filter="vodka-drinker">
+                    Vodka
+                </li>
+                <li>
+                    Lemonade
+                </li>
+                <li>
+                    Cola
+                </li>
+                <li data-stop-filter="vodka-drinker, beer-drinker">
+                    Water
+                </li>
+                <li data-stop-filter="vodka-drinker" data-pass-filter="czech beer-drinker">
+                    Special for cz beer lovers
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="step" id="water-drinker">
+        <h3 class="step__heading">Lets see if we can find something for you</h3>
+        <div class="step__content">
+            <p>We have a wide range of drinks on the menu for water drinkers.</p>
+        </div>
+        <div class="step__info">
+            <ul>
+                <li>
+                    Pilsner Urquell
+                </li>
+                <li data-pass-filter="australian beer-drinker">
+                    VB
+                </li>
+                <li data-pass-filter="beer-drinker">
+                    Asahi
+                </li>
+                <li data-pass-filter="vodka-drinker">
+                    Vodka
+                </li>
+                <li>
+                    Lemonade
+                </li>
+                <li>
+                    Cola
+                </li>
+                <li data-stop-filter="vodka-drinker, beer-drinker">
+                    Water
+                </li>
+                <li data-stop-filter="vodka-drinker" data-pass-filter="czech beer-drinker">
+                    Special for czech beer lovers
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="step" id="beer-drinker">
+        <h3 class="">Lets see if we can find something for you</h3>
+        <div class="step__content">
+            <p>We have a wide range of drinks on the menu for beer drinkers.</p>
+        </div>
+        <div class="step__info">
+            <ul>
+                <li>
+                    Pilsner Urquell
+                </li>
+                <li data-pass-filter="australian beer-drinker">
+                    VB
+                </li>
+                <li data-pass-filter="beer-drinker">
+                    Asahi
+                </li>
+                <li data-pass-filter="vodka-drinker">
+                    Vodka
+                </li>
+                <li>
+                    Lemonade
+                </li>
+                <li>
+                    Cola
+                </li>
+                <li data-stop-filter="vodka-drinker, beer-drinker">
+                    Water
+                </li>
+                <li data-stop-filter="vodka-drinker" data-pass-filter="czech beer-drinker">
+                    Special for cz beer lovers
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="decision-tree__summary">
+        <h3>Bar summary</h3>
+        <div class="decision-tree__summary_infos">
+        </div>
+    </div>
+    <div class="decision-tree__footer">
+        <button class="step__button step__button--back">Back</button>
+        <button class="step__button step__button--restart">Restart</button>
+    </div>
+</div>
+</body>
+</html>

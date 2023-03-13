@@ -1,11 +1,16 @@
 {
   "name": "decision_tree",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Decision tree library.",
   "main": "decision_tree.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "jardasmahel",
-  "license": "MIT"
+  "scripts": {},
+  "author": "Morpht <murray@morpht.com> (https://www.morpht.com)",
+  "license": "MIT",
+  "keywords": [
+    "decision_tree",
+    "decisiontree",
+    "decision-tree",
+    "vanilla",
+    "vanilla-js"
+  ]
 }
