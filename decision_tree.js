@@ -146,7 +146,7 @@ class DecisionTree {
       this.show('#' + this.config.id + ' .decision-tree__summary');
 
       // Show step info.
-      let infoHTML = ''
+      let infoHTML = '';
       if (this.storage.history) {
         // Copy history values to a local variable.
         const history = this.storage.history.slice();
