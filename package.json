@@ -1,6 +1,6 @@
 {
   "name": "decision_tree",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Decision tree library.",
   "main": "decision_tree.js",
   "scripts": {},
