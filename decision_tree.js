@@ -467,11 +467,12 @@ class DecisionTree {
    * Track attribute into local storage.
    */
   trackAttribute(id) {
-    const step = document.querySelector('#' + this.config.id + ' #' + id);
+    let step = document.querySelector('#' + this.config.id + ' #' + id);
     // Store the attribute.
     if (step != null) {
-      if (step.hasAttribute('data-cookie')) {
-        this.cookie(step.attributes['data-cookie'].value);
+      let stepOutcome = step.getAttribute('data-cookie');
+      if (stepOutcome !== null) {
+        this.cookie(stepOutcome.split("=")[0], stepOutcome.split("=")[1]);
       }
     }
   }
@@ -503,7 +504,7 @@ class DecisionTree {
     } else {
       expires = '';
     }
-    document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value) + expires + ' path=/ SameSite=None Secure';
+    document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value) + ';' + expires + ';' + ' path=/; SameSite=None; Secure';
   }
 }
 
