@@ -481,7 +481,7 @@ class DecisionTree {
    * Track pages via google analytics.
    */
   trackGA(path) {
-    if (typeof gtag === 'function' && drupalSettings.google_analytics !== 'undefined') {
+    if (typeof gtag === 'function' && drupalSettings.google_analytics !== undefined) {
       gtag('config', drupalSettings.google_analytics.account, {page_path: window.location.href + this.config.id + '/' + path});
     } else if (typeof ga === 'function' && ga.getAll()[0].get('clientId') !== null && ga.getAll()[0].get('trackingId') !== null) {
       ga('create', ga.getAll()[0].get('trackingId'), {

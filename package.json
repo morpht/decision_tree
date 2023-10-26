@@ -12,5 +12,9 @@
     "decision-tree",
     "vanilla",
     "vanilla-js"
-  ]
+  ],
+  "engines": {
+    "npm": "10.x",
+    "node": "20.x"
+  },
 }
