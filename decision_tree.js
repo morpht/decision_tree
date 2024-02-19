@@ -52,7 +52,7 @@ class DecisionTree {
       localStorage.removeItem(test);
       return true;
     } catch(e) {
-      console.error('Decision Tree will not work because the browser local storage is not enabled or accessible.');
+      console.log('Decision tree will not work optimally because the browser local storage is not enabled or accessible.');
       return false;
     }
   }
