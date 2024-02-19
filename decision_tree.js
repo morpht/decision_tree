@@ -17,6 +17,9 @@ class DecisionTree {
     const steps = this._loadSteps(id);
     if (Array.isArray(steps)) {
       this.config = {id, first_step: steps[0], steps};
+      if (!this._isLocalStorageAvailable()) {
+        return;
+      }
 
       // load all the steps available in DOM.
       this.storage = this._loadStorage(id);
@@ -33,6 +36,24 @@ class DecisionTree {
       }, this);
     } else {
       throw new Error('Please follow proper HTML structure.');
+    }
+  }
+
+  /**
+   * Check if the localstorage is available.
+   */
+  _isLocalStorageAvailable() {
+    try {
+      if (typeof localStorage === 'undefined') {
+        return false;
+      }
+      var test = 'test';
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      return true;
+    } catch(e) {
+      console.log('Decision tree will not work optimally because the browser local storage is not enabled or accessible.');
+      return false;
     }
   }
 
